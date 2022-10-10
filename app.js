@@ -1,5 +1,4 @@
 window.onload = function(e){
-  var tbody=document.getElementById('tbody');
   fetch(`http://localhost:3000`)
   .then(res => res.json())
   .then(data =>{
@@ -10,6 +9,7 @@ window.onload = function(e){
 }
 
 const appandInTable = (users) =>{
+  var tbody=document.getElementById('tbody');
   for(let i=0;i<users.length;i++){
     var tr=document.createElement("tr");
     var td1=document.createElement("td");
